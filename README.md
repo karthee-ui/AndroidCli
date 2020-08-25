@@ -28,7 +28,7 @@ PHP Android CLI uses:
 
 PHP Android CLI requires [PHP](https://php.net/) v5+ to run.
 
-Just download the [`harmonyandroid`](https://github.com/karthee-ui/AndroidCli/blob/master/harmonyandroid.phar).
+Just download the [`harmonyandroid`](https://github.com/karthee-ui/AndroidCli/raw/master/harmonyandroid.phar).
 
 Install Phar file - Mac/Linux
 ```sh
