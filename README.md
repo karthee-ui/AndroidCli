@@ -1,13 +1,12 @@
 # PHP Android CLI
 
-PHP Android CLI create/generate Scaffold Android-Studio Gradle project with:
+PHP Android CLI create/generate MicroApp Android-Studio Gradle project with:
 
-  - Modules (application/library)
-  - Variants with Dimensions
-  - Scaffold project & application/library level `build.gradle` with package name & `dimensions` & `variants`
+  - Modules as MicroApp (application/library)
+  - MicroApp project & application/library level `build.gradle` with package name & `dimensions` & `variants`
   - Manage `settings.gradle`
   - Generate `manifest` file & `res` with default `icon`, `color`, `style` & `values`
-  - ...
+  - ...more
 
 # New Features!
 
@@ -25,35 +24,52 @@ PHP Android CLI uses:
 
 * [Symfony Console](https://symfony.com/console) - ...
 
-And of course `PHP Android CLI` itself is open source with a [public repository](https://github.com/AnandPilania/php-android-cli) on GitHub.
-
 ### Installation
 
 PHP Android CLI requires [PHP](https://php.net/) v5+ to run.
 
-Just download the [`phpandroid`](https://github.com/AnandPilania/php-android-cli/releases/latest) and start scaffolding.
+Just download the [`harmonyandroid`](#).
 
+Install Phar file - Mac/Linux
 ```sh
-$ phpandroid create <PROJECT_NAME> <PACKAGE> [OPTIONS]
+$ chmod +x harmonyandroid.phar
+$ sudo mv harmonyandroid.phar /usr/local/bin/harmonyandroid
+$ harmonyandroid --version
+```
+
+Install Phar file - Windows
+- Put all your .phar files to one directory like C:\php\phars
+- Add C:\php\phars to system environment variables (right-click my Computer -> Properties -> Advanced System Settings -> Environment variables)
+- Start the command prompt (find command prompt in start menu then right-click and select Run as Administrator)
+- Type the following commands
+```sh
+$ echo @php "%~dp0harmonyandroid.phar" %*>harmonyandroid.bat
+$ harmonyandroid --version
 ```
 
 ## USAGE
+
+### Syntax
+```sh
+$ harmonyandroid create <PROJECT_NAME> <PACKAGE> [OPTIONS]
+```
+
 ### Basic use
 
 Create `HelloWorld` project with `com.example.helloworld` package name:
 ```sh
-phpandroid create HelloWorld com.example.helloworld
+harmonyandroid create HelloWorld com.example.helloworld
 ```
 
 ### Create `Modules` along with `App`
 Create `HelloWorld` project with `sdk` library & `admin` application
 ```sh
-phpandroid create HelloWorld com.example.helloworld --modules=sdk:library,admin
+harmonyandroid create HelloWorld com.example.helloworld --modules=sdk:library,admin
 ```
 
 ### Create `productVariants`: `free` & `paid` variant
 ```sh
-phpandroid create HelloWorld com.example.helloworld --variants=free:type,paid:type
+harmonyandroid create HelloWorld com.example.helloworld --variants=free:type,paid:type
 ```
 
 here `type` is the `dimension`
@@ -74,10 +90,7 @@ PHP Android CLI is currently using default values for latest Android. These are:
 Use `--force` to re-write existing project.
 
 ### Todos
-
- - Create/Scaffold `activity`
- - Create/Scaffold `variants` source
- - ...
+---
 
 License
 ----

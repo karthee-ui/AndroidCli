@@ -2,5 +2,5 @@
 <?php
 
 Phar::mapPhar();
-require_once "phar://phpandroid.phar/index.php";
+require_once "phar://harmonyandroid.phar/index.php";
 __HALT_COMPILER();
