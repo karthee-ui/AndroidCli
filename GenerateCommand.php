@@ -62,7 +62,6 @@ EOT
 
 		$this->generateOptions();
 		$this->createProject();
-		$this->generator();
 	}
 
 	private function createProject()
@@ -401,17 +400,4 @@ public class MainActivity extends AppCompatActivity {
 	{
 		$this->output->writeln('<info>' . $message . '</info>');
 	}
-
-	private function generator(){
-
-		exec('sh ./'.$this->projectName.'/gradlew -p /'.$this->projectName.' tasks --all2>&1',$out,$err);
-
-        var_dump($out); 
-		var_dump($err); 
-		exec('sh ./'.$this->projectName.'/gradlew -p /'.$this->projectName.' assembleDebug 2>&1',$out,$err);
-
-
-        var_dump($out); 
-        var_dump($err); 
-}
 }
