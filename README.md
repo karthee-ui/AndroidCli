@@ -1,9 +1,9 @@
 # PHP Android CLI
 
-PHP Android CLI create/generate MicroApp Android-Studio Gradle project with:
+PHP Android CLI create/generate Android-Studio Gradle project with:
 
-  - Modules as MicroApp (application/library)
-  - MicroApp project & application/library level `build.gradle` with package name & `dimensions` & `variants`
+  - Modules as application/library
+  - Create project & application/library level `build.gradle` with package name & `dimensions` & `variants`
   - Manage `settings.gradle`
   - Generate `manifest` file & `res` with default `icon`, `color`, `style` & `values`
   - ...more
