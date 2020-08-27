@@ -26,7 +26,7 @@ $innerIterator = new RecursiveDirectoryIterator(BASEDIR, RecursiveDirectoryItera
 
 $iterator = new RecursiveIteratorIterator(new RecursiveCallbackFilterIterator($innerIterator, $filter));
 
-$phar = new \Phar('harmonyandroid.phar', 0, 'harmonyandroid.phar');
+$phar = new \Phar('androidcli.phar', 0, 'androidcli.phar');
 $phar->setSignatureAlgorithm(\Phar::SHA1);
 $phar->startBuffering();
 $phar->buildFromIterator($iterator, BASEDIR);

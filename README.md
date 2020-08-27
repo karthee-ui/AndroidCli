@@ -28,13 +28,13 @@ PHP Android CLI uses:
 
 PHP Android CLI requires [PHP](https://php.net/) v5+ to run.
 
-Just download the [`harmonyandroid`](https://github.com/karthee-ui/AndroidCli/raw/master/harmonyandroid.phar).
+Just download the [`androidcli`](https://github.com/karthee-ui/AndroidCli/raw/master/androidcli.phar).
 
 Install Phar file - Mac/Linux
 ```sh
-$ chmod +x harmonyandroid.phar
-$ sudo mv harmonyandroid.phar /usr/local/bin/harmonyandroid
-$ harmonyandroid --version
+$ chmod +x androidcli.phar
+$ sudo mv androidcli.phar /usr/local/bin/androidcli
+$ androidcli --version
 ```
 
 Install Phar file - Windows
@@ -43,33 +43,33 @@ Install Phar file - Windows
 - Start the command prompt (find command prompt in start menu then right-click and select Run as Administrator)
 - Type the following commands
 ```sh
-$ echo @php "%~dp0harmonyandroid.phar" %*>harmonyandroid.bat
-$ harmonyandroid --version
+$ echo @php "%~dp0androidcli.phar" %*>androidcli.bat
+$ androidcli --version
 ```
 
 ## USAGE
 
 ### Syntax
 ```sh
-$ harmonyandroid create <PROJECT_NAME> <PACKAGE> [OPTIONS]
+$ androidcli create <PROJECT_NAME> <PACKAGE> [OPTIONS]
 ```
 
 ### Basic use
 
 Create `HelloWorld` project with `com.example.helloworld` package name:
 ```sh
-harmonyandroid create HelloWorld com.example.helloworld
+androidcli create HelloWorld com.example.helloworld
 ```
 
 ### Create `Modules` along with `App`
 Create `HelloWorld` project with `sdk` library & `admin` application
 ```sh
-harmonyandroid create HelloWorld com.example.helloworld --modules=sdk:library,admin
+androidcli create HelloWorld com.example.helloworld --modules=sdk:library,admin
 ```
 
 ### Create `productVariants`: `free` & `paid` variant
 ```sh
-harmonyandroid create HelloWorld com.example.helloworld --variants=free:type,paid:type
+androidcli create HelloWorld com.example.helloworld --variants=free:type,paid:type
 ```
 
 here `type` is the `dimension`
